@@ -27,6 +27,7 @@ understand **which tire is doing what, and in which direction**, during real dri
 
 To avoid misunderstanding, this tool:
 
+- Does not use external IMU, ODB(CAN) and GPS.
 - Does not use detailed tire models such as Magic Formula
 - Is **not** intended for absolute evaluation of tire forces or loads
 - Does not compute accurate Fz or friction coefficients from sensor data
@@ -97,6 +98,7 @@ that alone is considered success.
 
 誤解を避けるため、以下を明記します。
 
+- ODB(CAN)通信、GPS信号、外部IMU
 - 実タイヤモデルやMagic Formulaは使用していません（簡易的な飽和特性）
 - タイヤ力・荷重の**絶対値評価ツールではありません**
 - センサ値から正確なFzや摩擦係数を算出するものではありません
