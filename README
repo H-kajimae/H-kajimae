@@ -13,9 +13,81 @@ Notes:
 
 # Four-Wheel Friction Visualization (Experimental)
 
+This Android application is an experimental tool designed to help visualize
+how each of the four tires uses available friction while driving,
+based on smartphone IMU sensors.
+
+It does not attempt to reproduce a textbook “friction circle”.
+Instead, it is intended as a thinking aid to help drivers and engineers
+understand **which tire is doing what, and in which direction**, during real driving.
+
+---
+
+## What this app is *not*
+
+To avoid misunderstanding, this tool:
+
+- Does not use detailed tire models such as Magic Formula
+- Is **not** intended for absolute evaluation of tire forces or loads
+- Does not compute accurate Fz or friction coefficients from sensor data
+- Is not a data logger or a vehicle control system
+
+Its purpose is purely **visualization for understanding, comparison, and insight**.
+
+---
+
+## Why visualize each wheel independently
+
+With vehicle-center G values or single-wheel models, it is difficult to see:
+
+- Which tire is approaching its limit first
+- How front/rear and left/right roles change dynamically
+- Why understeer or oversteer emerges from a given input
+
+This app uses a simplified model to decompose:
+
+- Longitudinal load transfer
+- Lateral load transfer
+- Combined longitudinal and lateral forces
+
+and focuses on showing **how much each tire is being used**, independently.
+
+---
+
+## Why the display looks intentionally restrained
+
+The app includes multiple layers of suppression and stabilization, such as:
+
+- Bump and roughness suppression
+- Load-lightening handling
+- Deadbands and hysteresis
+- Temporary HOLD behavior
+
+These are not meant to make the display visually exciting.
+They exist to prevent *plausible-looking but meaningless behavior*
+during real driving.
+
+The goal is not visual impact,
+but behavior that remains interpretable over sustained driving.
+
+---
+
+## About this project
+
+This project does not claim to present a “correct” or “final” solution.
+
+It is best understood as:
+
+- A tool to connect driving sensation with physical quantities
+- A record of trial-and-error in thinking about vehicle dynamics
+- An experiment to deepen personal understanding
+
+If this project helps organize your thinking about driving or vehicle behavior,
+that alone is considered success.
+
 -----------------------------------------------------
 
-このアプリは、スマートフォンの内蔵IMUセンサを用いて、車両走行中の **四輪それぞれの摩擦利用状態** を直感的に可視化することを目的とした実験的ツールです。
+このFriction Circle (Android)アプリは、スマートフォンの内蔵IMUセンサを用いて、車両走行中の **四輪それぞれの摩擦利用状態** を直感的に可視化することを目的とした実験的ツールです。
 
 一般的な「摩擦円」を再現するものではなく、**運転中に各輪がどの程度・どの方向に力を使っているか**を理解するための「思考補助ツール」として設計しています。
 
